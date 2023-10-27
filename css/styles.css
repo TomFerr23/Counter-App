@@ -1,0 +1,410 @@
+html, body {
+    touch-action: manipulation;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #060707;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
+}
+
+.counter {
+    background-color: #141414;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.counter h1 {
+    font-size: 2rem;
+    color: #8e8e9b; 
+}
+
+.value {
+    font-size: 5rem;
+    color: #e1e1ff; 
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.value span {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+/* Animation for value changes */
+.value.animate span {
+    opacity: 0;
+}
+
+button {
+    font-size: 24px;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #5A80FF;
+    color: #000000; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: ease-in-out 0.1s;
+}
+
+/* Styles for the "-" button */
+#decrement {
+    background-color: #dfebf8;
+}
+
+button:hover {
+    transform: translateY(-3px);
+}
+
+
+.statistics {
+    margin: 20px 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #141414;
+    color: #8e8e9b;
+    border-radius: 10px;
+    transition: ease-in-out 0.1s;
+    overflow-y: scroll;
+    max-height: 100px
+}
+
+section {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+/* Card */
+
+.card-1 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f3ffc6 !important;
+    color: #8e8e9b;
+    border-radius: 10px;
+    max-height: 100px;
+    position: absolute;
+    border: 1px solid #7a7a7a;
+    bottom: 200px;
+    animation: slideIn 0.5s ease forwards;
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.card-1 h3 {
+    color: #111;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.card-2 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f3ffc6 !important;
+    color: #8e8e9b;
+    border-radius: 10px;
+    height: 100vh;
+    width: auto;
+    position: absolute;
+    border: 1px solid #7a7a7a;
+    bottom: 200px;
+    animation: slideIn 0.5s ease forwards;
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.card-2 img {
+    max-width: 500px;
+}
+
+.card-2 h3 {
+    color: #111;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+.badge {
+    max-width: 50px;
+}
+
+
+
+
+  
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+
+    .card-1 {
+        top: 0px;
+    }
+
+    .footer-content h2 {
+        font-size: .7rem;
+    }
+
+    .footer-content img {
+        width: 32px;
+        height: 32px;
+    }
+    
+}
+
+
+
+
+
+
+/* Achievement card */
+.achievement-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3ffc6;
+    color: #111; 
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #7a7a7a;
+    height: 700px;
+    width: 500px;
+    position: absolute;
+    animation: slideIn 0.5s ease forwards;
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+/* Achievement card's image */
+.achievement-card img {
+    max-width: 250px;
+}
+
+
+.reset-counter {
+    background-color: #bbff00;
+}
+
+
+/* Style for the instructions section */
+.instructions {
+    background-color: #141414; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    max-width: 250px;
+    max-height: 300px;
+}
+
+.instructions h2 {
+    font-size: 1rem;
+    color: #bbff00; 
+    margin-bottom: 10px;
+}
+
+.instructions p {
+    color: #b1b1b1; 
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.instructions ul {
+    list-style-type: disc;
+    margin-bottom: 15px;
+}
+
+
+
+.instructions button {
+    background-color: #5A80FF; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.clicks-new {
+    font-style: italic;
+    color: #f5f5f5;
+    font-weight: 600;
+}
+
+
+
+
+/* NAVIGATION */
+/* Styles for the navigation bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #161616; 
+    color: #fff; 
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.navbar-right {
+    display: flex;
+}
+
+/* Style for the icons */
+.navbar-right img {
+    width: 24px;
+    height: 24px;
+    transition: ease-in-out 0.3s;
+}
+
+.navbar-right img:hover {
+    transform: scale(0.9);
+    filter: invert(20%);
+}
+
+/* Styles for the glowing text effect */
+.glow-text {
+    font-size: 24px;
+    color: #fff;
+    animation: subtle-glow 2s infinite alternate;
+}
+
+@keyframes subtle-glow {
+    0% {
+        text-shadow: 0 0 5px rgba(66, 66, 66, 0.7), 0 0 10px rgba(209, 209, 209, 0.7), 0 0 15px rgba(20, 20, 20, 0.7);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(92, 92, 92, 0.7), 0 0 20px rgba(22, 22, 22, 0.7), 0 0 30px rrgba(250, 250, 250, 0.7)
+    }
+}
+
+
+/* Footer */
+footer {
+    background-color: #161616; 
+    color: #fff; 
+    padding: 20px 0; 
+    width: 100%; 
+    margin-top: 100px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+.footer-content h2 {
+    font-family: "Roboto mono", monospace;
+    margin-top: 20px;
+    color: #cacaca;
+    font-weight: 300;
+}
+
+.footer-content .presentation {
+    text-decoration: underline;
+    color: rgb(138, 138, 138);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

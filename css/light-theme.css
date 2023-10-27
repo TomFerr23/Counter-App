@@ -1,0 +1,47 @@
+/* light-theme.css */
+body.light-theme {
+    background-color: #f7f7f7; 
+}
+
+.counter.light-theme {
+    background-color: #ffffff; 
+}
+
+.counter.light-theme h1 {
+    color: #333; 
+}
+
+.value.light-theme {
+    color: #9292ff; 
+}
+
+body.light-theme .counter, body.light-theme .statistics {
+    background-color: #ffffff;
+    color: #333;
+    transition: color 0.1s ease-in;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Style for the instructions section */
+.light-theme .instructions {
+    background-color: #ffffff; 
+}
+
+.light-theme .instructions h2 {
+    color: #5c4aff; 
+    margin-bottom: 10px;
+}
+
+.light-theme .instructions p {
+    color: #333; 
+    margin-bottom: 10px;
+}
+
+.light-theme span.clicks-new {
+    font-style: italic;
+    color: #020202 !important;
+    font-weight: 600;
+}
+
+
